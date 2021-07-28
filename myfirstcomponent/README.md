@@ -1,3 +1,9 @@
+# This is a Booklist
+
+Its simply displays a list of books in a grid pattern. The point of this was to view the component driven nature of react.
+
+![List all books](https://github.com/agault/BookList-React-NotesAdded/blob/main/myfirstcomponent/Capture.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
