@@ -72,31 +72,53 @@ import './index.css' //attach css file. file in same folder
 //import the style sheet on top
 
 
+// function BookList() {//Always cap the functions names
+//   return (//used the person arrow function to add it to retun statement.
+//     //can add mutiple instances of book
+    
+//     <section className="booklist">
+//       <Book/>
+//     </section>
+//     );
+// }
+// //exlicit arrow function uses {}
+// const Book = () => {
+//   return <article className="book">
+//     <Image/>
+//     <Title/>
+//     <Author/>
+//   </article>
+// }
+// const Image = () => <img src="https://m.media-amazon.com/images/I/51ZaRaeSoaL.jpg"/>
+// const Title = () => <h2>100 Year old man</h2>
+// const Author = () => <h4 style={{color: '#617d98'}}>Jonas Jonasson</h4> // use {} to enter Javascript, then it needs to be an obj hence second {{}}
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++JSX/JS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 function BookList() {//Always cap the functions names
   return (//used the person arrow function to add it to retun statement.
     //can add mutiple instances of book
     
     <section className="booklist">
       <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
     </section>
     );
 }
+//Setting up author as JS. JS in JSX must return a value
 //exlicit arrow function uses {}
 const Book = () => {
   return <article className="book">
     <Image/>
     <Title/>
-    <Author/>
+    {author}
   </article>
 }
+//ALL COMPONENETS:
 const Image = () => <img src="https://m.media-amazon.com/images/I/51ZaRaeSoaL.jpg"/>
 const Title = () => <h2>100 Year old man</h2>
-const Author = () => <h4>Jonas Jonasson</h4>
+//JS VAR AS COMPONENT: Author is called in the Book component above using JS
+const author = 'Jonas Jonasson' // use {} to enter Javascript, then it needs to be an obj hence second {{}}
 
 //Render method looks for 2 things 1) what we are going to render "Greetings" component 2)Where to render
 reactDom.render(<BookList />, document.getElementById('root'))//To pass in Greeting must close tag "/>"... if u pass in img u must close it
